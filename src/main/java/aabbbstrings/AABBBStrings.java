@@ -10,14 +10,8 @@ public class AABBBStrings {
      * @return the number of words in the AABBB language of length n
      */
     public static long countStrings(int n) {
-
-        if (n == 0 || n == 1) {
-            return 0;
-        }
-        if (n == 2 || n == 3) {
-            return 1;
-        }
-        return countStrings(n - 2) + countStrings(n - 3);
+	// TODO: Implement this method
+	return -1;
     }
 
     /**
@@ -29,39 +23,8 @@ public class AABBBStrings {
      *             when the length of a word exceeds 30
      */
     public static Set<String> getWords(int n) throws TooManyWordsException {
-
-        if (n == 0 || n == 1) {
-            return new HashSet<String>();
-        }
-
-        if (n == 2) {
-            HashSet<String> set = new HashSet<>();
-            set.add("AA");
-            return set;
-        }
-
-        if (n == 3) {
-            HashSet<String> set = new HashSet<>();
-            set.add("BBB");
-            return set;
-        }
-
-        Set<String> setAA = getWords(n - 2);
-        Set<String> setBBB = getWords(n - 3);
-
-        HashSet<String> setWithAA = new HashSet<>();
-        for (String word: setAA) {
-            setWithAA.add(word + "AA");
-        }
-
-        HashSet<String> setWithBBB = new HashSet<>();
-        for (String word: setBBB) {
-            setWithBBB.add(word + "BBB");
-        }
-
-        setWithAA.addAll(setWithBBB);
-        return setWithAA;
-
+	// TODO: Implement this method
+	return null;
     }
 
 }
